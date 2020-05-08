@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<%- include('./partials/head') %>
+
+<body>
+<%- include('./partials/header') %>
+
+<h1>Tareas con prioridad ALTA</h1>
+<ul>
+    <% tareas.forEach( tarea => { %>
+        <li> <%= tarea.titulo %> </li>
+    <% }) %>
+</ul>
+</body>
+
+
+</html>

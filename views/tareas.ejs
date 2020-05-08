@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<%- include('./partials/head') %>
+
+<body>
+<%- include('./partials/header') %>
+    <h1> <%= titulo %> </h1>
+    <p>Esta es mi primer vista en Ejs! </p>
+    <h4>Listado de tareas con prioridad ALTA</h4>
+    <ul>
+        <% for (let i = 0 ; i < tareas.length ; i++ ) { %>
+            <% if ( tareas[i].prioridad == 'ALTA' ) { %>
+                <li> <%= tareas[i].titulo %>  - Descripcion: <%= tareas[i].descripcion %> </li>
+            <% } %>
+        <% } %>
+    </ul>
+    <hr>
+    <ul>
+        <% tareas.forEach( tarea => { %>
+            <li> <%= tarea.titulo %>  - Descripcion: <%= tarea.descripcion %> </li>
+        <% } )%>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/head') %>
+  <body>
+  <%- include('./partials/header') %>
+    <h1> <%= title %> </h1>
+    <p>Welcome to <%= title %> </p>
+    <p> <%= descripcion %> </p>
+    <% for (let i = 0 ; i < 12 ; i++) {
+      if ( i % 2 == 0) { %>
+        <p>Soy i y estoy en indice: <%= i %> </p>
+      <% } %>
+    <% } %>
+
+    <a href="tareas">Link a tareas pendientes...</a>
+  </body>
+</html>
